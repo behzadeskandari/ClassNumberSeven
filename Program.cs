@@ -134,7 +134,7 @@ namespace ClassNumberSeven
                 Console.WriteLine($"The Name Is : {item.Name}");
                 Console.WriteLine($"The Salary is : {item.Salary}");
                 Console.WriteLine($"The Working Hours is : {item.WorkingHours}");
-                Console.WriteLine($"The  Total is : {item.getResult()}");
+                Console.WriteLine($"The  Monthly salary is : {item.getResult()}");
                 Console.WriteLine("----------------------------------------------");
 
             }
