@@ -178,7 +178,7 @@ namespace ClassNumberSeven
 
     public class Person
     {
-        private int _salar;
+        private int _salary;
         private int _workingHours;
         private string _name;
         public Person(int Salary ,int WorkingHours, string Name)
@@ -190,8 +190,15 @@ namespace ClassNumberSeven
         }
         public int Salary
         {
-            get { return _salar; }
-            set { _salar = value; }
+            get { return _salary; }
+            set 
+            {
+                if (_salary <= 0)
+                {
+                    Console.WriteLine("The number is equal zero or less than zero ");
+                }
+                _salary = value;
+            }
         }
 
 
