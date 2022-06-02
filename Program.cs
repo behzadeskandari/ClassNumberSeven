@@ -115,27 +115,28 @@ namespace ClassNumberSeven
                 Console.WriteLine("Enter Working hours");
                 int workinghours = Convert.ToInt32(Console.ReadLine());
 
-
                 Console.WriteLine("Enter Working name");
                 string name = Console.ReadLine();
 
-                Person prs = new Person(salary, workinghours, name);
+                Person prs = new Person(name,salary, workinghours);
 
-                string Holder = prs.getResult();
-                Console.WriteLine("getResult Returns");
-                Console.WriteLine(Holder);
+                ////int Holder = prs.getResult();
+                ////Console.WriteLine("getResult Returns");
+                ////Console.WriteLine(Holder);
 
                 lstPrs.Add(prs);
-               
 
             }
-            lstPrs.Sort();
+            //lstPrs.Sort();
 
             foreach (var item in lstPrs)
             {
-                Console.WriteLine(item.Name);
-                Console.WriteLine(item.Salary);
-                Console.WriteLine(item.WorkingHours);
+                Console.WriteLine($"The Name Is : {item.Name}");
+                Console.WriteLine($"The Salary is : {item.Salary}");
+                Console.WriteLine($"The Working Hours is : {item.WorkingHours}");
+                Console.WriteLine($"The  Total is : {item.getResult()}");
+                Console.WriteLine("----------------------------------------------");
+
             }
 
             //string ReturnValue = Salary + WorkingHours + Name;
@@ -182,7 +183,9 @@ namespace ClassNumberSeven
         private int _salary;
         private int _workingHours;
         private string _name;
-        public Person(int Salary ,int WorkingHours, string Name)
+        public int Total;
+        //, string Name
+        public Person(string Name,int Salary ,int WorkingHours)
         {
             this.Salary = Salary;
             this.WorkingHours = WorkingHours;
@@ -194,10 +197,10 @@ namespace ClassNumberSeven
             get { return _salary; }
             set 
             {
-                if (_salary <= 0)
-                {
-                    Console.WriteLine("The number is equal zero or less than zero ");
-                }
+                //if (_salary <= 0)
+                //{
+                //    Console.WriteLine("The number is equal zero or less than zero ");
+                //}
                 _salary = value;
             }
         }
@@ -217,9 +220,11 @@ namespace ClassNumberSeven
         }
 
 
-        public string getResult()
+        public int getResult()
         {
-            var Total = Salary + WorkingHours + Name;
+            var datetime = DateTime.Now;
+            var day = datetime.Day;
+            Total = Salary * WorkingHours * 24;///day;
             return Total;
         }
     }
