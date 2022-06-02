@@ -103,7 +103,11 @@ namespace ClassNumberSeven
         static void Main(string[] args)
         {
             List<Person> lstPrs = new List<Person>();
-            for (int i = 0; i < lstPrs.Count; i++)
+
+            Console.WriteLine("How Many Loops On Person Class You Want ??");
+            int loopCount = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < loopCount; i++)
             {
                 Console.WriteLine("Enter Salary");
                 int salary = Convert.ToInt32(Console.ReadLine());
