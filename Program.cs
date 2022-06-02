@@ -122,7 +122,7 @@ namespace ClassNumberSeven
                 Person prs = new Person(salary, workinghours, name);
 
                 string Holder = prs.getResult();
-
+                Console.WriteLine("getResult Returns");
                 Console.WriteLine(Holder);
 
                 lstPrs.Add(prs);
