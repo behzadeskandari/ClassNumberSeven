@@ -126,7 +126,9 @@ namespace ClassNumberSeven
 
                 foreach (var item in lstPrs)
                 {
-                    Console.WriteLine(item);
+                    Console.WriteLine(item.Name);
+                    Console.WriteLine(item.Salary);
+                    Console.WriteLine(item.WorkingHours);
                 }
 
 
