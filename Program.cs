@@ -126,17 +126,18 @@ namespace ClassNumberSeven
                 Console.WriteLine(Holder);
 
                 lstPrs.Add(prs);
-                lstPrs.Sort();
-
-                foreach (var item in lstPrs)
-                {
-                    Console.WriteLine(item.Name);
-                    Console.WriteLine(item.Salary);
-                    Console.WriteLine(item.WorkingHours);
-                }
-
+               
 
             }
+            lstPrs.Sort();
+
+            foreach (var item in lstPrs)
+            {
+                Console.WriteLine(item.Name);
+                Console.WriteLine(item.Salary);
+                Console.WriteLine(item.WorkingHours);
+            }
+
             //string ReturnValue = Salary + WorkingHours + Name;
 
 
