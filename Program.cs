@@ -194,15 +194,15 @@ namespace ClassNumberSeven
         }
         public long Salary
         {
-            get { return _salary; }
-            set 
+            get
             {
-                //if (_salary <= 0)
-                //{
-                //    Console.WriteLine("The number is equal zero or less than zero ");
-                //}
-                _salary = value;
+                if (_salary <= 0)
+                {
+                    Console.WriteLine("The number is equal zero or less than zero ");
+                }
+                return _salary; 
             }
+                set { _salary = value; }
         }
 
 
@@ -224,7 +224,7 @@ namespace ClassNumberSeven
         {
             var datetime = DateTime.Now;
             var day = datetime.Day;
-            Total = Salary * WorkingHours * 24;///day;
+            Total = (int)Salary * WorkingHours * 24;///day;
             return Total;
         }
     }
