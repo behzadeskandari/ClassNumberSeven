@@ -180,7 +180,7 @@ namespace ClassNumberSeven
 
     public class Person
     {
-        private int _salary;
+        private long _salary;
         private int _workingHours;
         private string _name;
         public int Total;
@@ -192,7 +192,7 @@ namespace ClassNumberSeven
             this.Name = Name;
 
         }
-        public int Salary
+        public long Salary
         {
             get { return _salary; }
             set 
